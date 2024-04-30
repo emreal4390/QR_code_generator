@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivQrCode"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:srcCompat="@drawable/qr_code"
+        tools:ignore="ContentDescription"
+         />
+
+    <EditText
+
+        android:id="@+id/etText"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/bg_edittext"
+        android:gravity="center"
+        android:hint="Enter your Text"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/color_hint"
+        android:textSize="16sp"
+
+        app:layout_constraintTop_toBottomOf="@id/ivQrCode"
+        tools:layout_editor_absoluteX="25dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGenerate"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/color_green"
+        android:text="GENERATE"
+        android:textAllCaps="false"
+        app:cornerRadius="13dp"
+        app:layout_constraintTop_toBottomOf="@id/etText"
+        tools:layout_editor_absoluteX="25dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnShareQrCode"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/color_red"
+        android:enabled="false"
+        android:text="SHARE QR CODE"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+
+        app:cornerRadius="13dp"
+        app:layout_constraintTop_toBottomOf="@id/btnGenerate"
+        tools:layout_editor_absoluteX="25dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

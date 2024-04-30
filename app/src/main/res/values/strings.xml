@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">QR Code Generator</string>
+    <string name="generate" />
+    <string name="share_qrcode" />
+</resources>
